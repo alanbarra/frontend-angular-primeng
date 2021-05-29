@@ -1,0 +1,46 @@
+<app-navmenu></app-navmenu>
+
+<div class="p-grid p-justify-center">
+  <div class="p-col-12 p-md-12 p-lg-10">
+    <p-panel header="Cadastrar nova lista de tarefas" [toggleable]="true">
+      <form [formGroup]="createListaForm" (ngSubmit)="onSubmit()">
+        <div class="p-fluid">
+          <div class="p-field">
+            <label>Título da Lista:</label>
+            <input type="text" pInputText formControlName="titulo" />
+          </div>
+          <div class="p-field">
+            <label>Descrição da Lista:</label>
+            <textarea
+              rows="5"
+              cols="30"
+              pInputTextarea
+              formControlName="descricao"
+            ></textarea>
+          </div>
+        </div>
+        <div class="p-text-right">
+          <button
+            pButton
+            pRipple
+            type="button"
+            label="Voltar"
+            class="p-button-warning p-mr-2 p-mb-0"
+            style="color: #ffffff"
+            routerLink="/home"
+          ></button>
+
+          <button
+            pButton
+            pRipple
+            type="submit"
+            label="Salvar"
+            class="p-button-success"
+          ></button>
+        </div>
+      </form>
+    </p-panel>
+  </div>
+</div>
+
+<p-toast position="top-right"></p-toast>

@@ -1,0 +1,36 @@
+<div style="color: red">
+  <p-menubar [model]="items">
+    <ng-template pTemplate="start">
+      <img
+        src="https://primefaces.org/primeng/showcase/assets/showcase/images/primeng.svg"
+        height="40"
+        class="p-mr-2"
+      />
+    </ng-template>
+    <ng-template pTemplate="end">
+      <p-button
+        label="Nova Lista"
+        icon="pi pi-plus"
+        class="p-mr-4 p-mb-0"
+        routerLink="/lista"
+      ></p-button>
+      <p-splitButton
+        label="Sair"
+        icon="pi pi-power-off"
+        styleClass="p-button-success p-mb-0"
+        (onClick)="logout()"
+        [model]="itemsUser"
+      ></p-splitButton>
+      <!--
+      <button
+        pButton
+        pRipple
+        type="button"
+        icon="pi pi-power-off"
+        class="p-button-rounded p-button-success"
+        routerLink="/"
+      ></button>
+      -->
+    </ng-template>
+  </p-menubar>
+</div>

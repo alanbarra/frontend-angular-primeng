@@ -1,0 +1,43 @@
+<app-navmenu></app-navmenu>
+
+<div class="p-grid p-justify-center">
+  <div class="p-col-12 p-md-8 p-lg-6">
+    <p-panel header="Alteração de senha" [toggleable]="true">
+      <form [formGroup]="editPerfilForm" (ngSubmit)="onSubmit()">
+        <div class="p-fluid">
+          <div class="p-field">
+            <label>Nova Senha:</label>
+            <input type="password" pInputText formControlName="password" />
+          </div>
+          <div class="p-field">
+            <label>Repita a nova Senha:</label>
+            <input
+              type="password"
+              pInputText
+              formControlName="passwordConfirmacao"
+            />
+          </div>
+        </div>
+        <div class="p-text-right">
+          <button
+            pButton
+            pRipple
+            type="button"
+            label="Voltar"
+            class="p-button-warning p-mr-2 p-mb-0"
+            style="color: #ffffff"
+            routerLink="/home"
+          ></button>
+
+          <button
+            pButton
+            pRipple
+            type="submit"
+            label="Salvar"
+            class="p-button-success"
+          ></button>
+        </div>
+      </form>
+    </p-panel>
+  </div>
+</div>

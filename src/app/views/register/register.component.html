@@ -1,0 +1,59 @@
+<div class="titulo"><p>TASKS.Manager</p></div>
+
+<div class="p-grid p-justify-center">
+  <div class="p-col-10 p-md-8 p-lg-6 card">
+    <div class="p-shadow-10">
+      <p-card header="Cadastro">
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+          <div class="p-fluid">
+            <div class="p-field">
+              <label>Nome Completo:</label>
+              <input type="text" id="nome" pInputText formControlName="nome" />
+            </div>
+            <div class="p-field">
+              <label>Email:</label>
+              <input
+                type="email"
+                id="email"
+                pInputText
+                formControlName="email"
+              />
+            </div>
+            <div class="p-field">
+              <label>Senha:</label>
+              <input
+                type="password"
+                id="password"
+                pInputText
+                formControlName="password"
+              />
+            </div>
+            <div class="p-field">
+              <label>Repita a Senha:</label>
+              <input
+                type="password"
+                pInputText
+                formControlName="passwordConfirmacao"
+              />
+            </div>
+            <br />
+            <div class="p-field">
+              <p-toast position="top-right"></p-toast>
+              <button
+                pButton
+                pRipple
+                label="Cadastrar"
+                class="p-button-success"
+                type="submit"
+                [disabled]="!registerForm.valid"
+              ></button>
+            </div>
+          </div>
+          <p class="p-text-left">
+            <a routerLink="/login" class="link">Voltar</a>
+          </p>
+        </form>
+      </p-card>
+    </div>
+  </div>
+</div>
